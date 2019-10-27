@@ -1,13 +1,13 @@
-const contrellers = require('./controllers');
+const controllers = require('./controllers');
 
 const router = (app) => {
-  app.get('/login', contrellers.Account.loginPage);
-  app.post('/login', contrellers.Account.login);
-  app.get('/signup', contrellers.Account.signupPage);
-  app.post('/signup', contrellers.Account.signup);
-  app.get('/logout', contrellers.Account.logout);
-  app.get('/maker', contrellers.Domo.makerPage);
-  app.get('/', contrellers.Account.loginPage);
+  app.get('/login', controllers.Account.loginPage);
+  app.post('/login', controllers.Account.login);
+  app.get('/signup', controllers.Account.signupPage);
+  app.post('/signup', controllers.Account.signup);
+  app.get('/logout', controllers.Account.logout);
+  app.get('/maker', controllers.Domo.makerPage);
+  app.get('/', controllers.Account.loginPage);
 };
 
 module.exports = router;
